@@ -1,0 +1,16 @@
+ 1026  ls
+ 1027  sort -n -r 
+ 1028  whoami
+ 1029  hostname
+ 1030  ;ess
+ 1031  less
+ 1032  head
+ 1033  mkdir week1
+ 1034  cd week1
+ 1035  ls ~/usr/bin | sort -r > ex1.txt
+ 1036  ls /usr/bin | sort -r > ex1.txt
+ 1037  head ex1.txt
+ 1038  rm ex1.txt
+ 1039  ls /usr/bin | grep gcc | sort -r > ex1.txt
+ 1040  head ex1.txt
+ 1041  history
