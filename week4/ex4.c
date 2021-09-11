@@ -5,33 +5,6 @@
 
 
 int main () {
-//    // read the input command
-//    char str[];
-//    printf("> ");
-//    fgets(str, 3, stdin);
-//
-//    // parse the input by " "
-//    char *command[64];
-//    for(int i = 0; i < 64; i++) {
-//        command[i] = NULL;
-//    }
-//    char *ptr = strtok(str, " ");
-//    for(int i = 0; ptr != NULL; i++)
-//    {
-//        printf("ptr %s\n", ptr);
-//        command[i] = malloc(strlen(ptr) + 1);
-//        strcpy(command[i], ptr);
-//        ptr = strtok(NULL, " ");
-//    }
-//    printf("ptr %s\n", ptr);
-//
-//    printf("command:\n");
-//    for(int k = 0; command[k] != NULL; k++) {
-//        printf("%d) %s", k, command[k]);
-//    }
-//
-//    execvp(command[0], command);
-
     while(1) {
         char input[1024];
         char *command[64];
