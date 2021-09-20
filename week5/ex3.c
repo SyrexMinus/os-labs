@@ -29,8 +29,7 @@ int main(void)
     /* Wait till threads are complete before main continues. Unless we  */
     /* wait we run the risk of executing an exit which will terminate   */
     /* the process and all threads before the threads have completed.   */
-    while(!race_condition_occured);
-    printf("Race condition occured\n");
+    pthread_join(consumer_tid, NULL);
 
     return 0;
 }
@@ -38,13 +37,11 @@ int main(void)
 
 void * consumer_loop(void * _) {
     while(1) {
-        while(is_consumer_sleep) {
-            if (is_consumer_sleep) {
-                race_condition_occured = 1;
-            }
-        }
+        while(is_consumer_sleep);
 
         if(count == 0) {
+            /* race conditions appears there when scheduler let
+             * producer set the variable to 0 and go to sleep right after */
             is_consumer_sleep = 1;
             continue;
         }
@@ -60,13 +57,11 @@ void * producer_loop(void * _) {
     char char_index = 0;
 
     while(1) {
-        while(is_producer_sleep) {
-            if (is_consumer_sleep) {
-                race_condition_occured = 1;
-            }
-        }
+        while(is_producer_sleep);
 
         if(count == BUFFER_SIZE) {
+            /* race conditions appears there when scheduler let
+             * consumer set the variable to 0 and go to sleep right after */
             is_producer_sleep = 1;
             continue;
         }
