@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+   1408	    296	      8	   1712	    6b0	out
