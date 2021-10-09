@@ -1,0 +1,12 @@
+Given:
+- 16-bit virtual addresses
+- 8 KB page size
+- single-level linear page table
+Find:
+- entries number - ?
+Solution:
+Since page has size 8 KB, then we need an offset of size which makes possible to access any byte inside page. Number of
+bytes inside page 8 * 2^10 = 2^13. So we need offset of size 13 bits. Hence, in virtual address left 16 - 13 = 3 bits
+for pages indexing. 3 bits is sufficient to support at most 2^3 = 8 page entries.
+Answer:
+8 entries are needed for a single-level linear page table.

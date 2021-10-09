@@ -1,0 +1,6 @@
+Virtual memory differs from physical memory in that it:
+1) The address in it may not correspond to the physical address of the cell
+2) Its size may not correspond to the real size of the RAM
+3) To access a memory cell, the address is first mapped to a physical one. If there is no specified data in the found
+cell, a "page fault" occurs, the memory unit intercepts it and loads the cached data into RAM, corrects the mapping for
+the cell to new one.
