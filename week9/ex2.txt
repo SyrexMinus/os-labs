@@ -1,0 +1,17 @@
+(For page frames number = 2)
+
+Initial sequence of references.
+0 0 1 1 2 2 3 3 0 0 1 1 2 2 3 3
+Hits = 8 Misses = 8 Hit/Miss ratio = 1
+
+Hit/Miss ratio increases.
+1 1 1 1 0 0 0 0 2 2 2 2 3 3 3 3
+Hits = 12 Misses = 4 Hit/Miss ratio = 3
+Hit/Miss ratio increases because repetitive page references more often come at the moment when their page ids already in
+page frames.
+
+Hit/Miss ratio decreases.
+0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3
+Hits = 0 Misses = 16 Hit/Miss ratio = 0
+Hit/Miss ratio increases because repetitive page references more often come at the moment when their page ids not in
+page frames. Too many ticks pass between the arrival of the same page id to keep the previous page id in page frames.
