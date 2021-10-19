@@ -40,7 +40,7 @@ int main(int argc, char* argv[]) {
         for(int i = 0; i < page_frames_number; i++) {
             printf("\ni = %d id = %d %d", i, page_frames[i].id, page_frames[i].rank);
 
-            if(min_rank == -1 || min_rank > page_frames[i].rank) {
+            if(min_rank == -1 || min_rank >= page_frames[i].rank) {
                 min_rank = page_frames[i].rank;
                 min_rank_i = i;
             }
