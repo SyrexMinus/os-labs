@@ -1,0 +1,8 @@
+Avaliable shortcuts:
+P + E -> "I passed the Exam!"
+C + A + P -> "Get some cappuccino!"
+K + C + U + F -> "I failed the Exam!"
+I failed the Exam!
+Get some cappuccino!
+I passed the Exam!
+I passed the Exam!
