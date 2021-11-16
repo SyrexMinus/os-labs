@@ -1,0 +1,24 @@
+Recovery strategy is a strategy of detecting a deadlock and then recovery from it. Recovery could by done through
+preemption, rollback or killing processes. This strategy might be better than others in cases when nature of needed
+resource could be safely taken away from the process and then returned back, we apply preemption. The strategy is also
+better in cases when deadlocked process is not restricted on changing its state, that it can be safely rolled back to
+previous checkpoint, we apply rollback. Finally, recovery strategy could be better in cases when a process that can be
+rerun from the beginning with no ill effects, we apply killing processes due to its simplicity of realization.
+
+Prevention strategy is a deadlock dealing strategy in which we can provide avoidance of Mutual-Exclusion, Hold-and-Wait,
+No-Preemption or Circular wait. This strategy might be better than others in cases when it is possible to minimise
+resource usage using avoiding giving it to many processes, we use avoidance of Mutual-Exclusion. The strategy is also
+better in cases when it is possible to calculate for all processes in system to send list of all needed during execution
+resources, in this case system will be sure that the process will not be deadlocked if it will get all needed resources
+at once, we apply Hold-and-Wait. Third, prevention strategy could be better in cases when all processes before
+requesting additional resources can release all holding at the time resources, then system can manage all resources
+between processes one by one such that they complete their work and then others can use the resources, we again use
+Hold-and-Wait. Fourth, this strategy might be better than others in cases when it is possible to take back resources
+that process uses or when it is possible to virtualize them, when, for example, several processes can put a job that is
+not urgent, so that they will be done alternately, managed by some controller, we use No-Preemption. Another best use
+case it is possible to dedicate only one resource per time for a process, then theoretically it is impossible to have
+a cycle in allocation graph, we use Circular wait. The advantage of its method is that system will never have deadlocks.
+
+Avoidance strategy is a strategy of predicting what will happen if we will grant resources to some process. Avoidance
+strategy might be better than others in cases when we want to be sure that we will never come to the deadlock
+situation and we have a time to spend time to predict it.
